@@ -1,0 +1,26 @@
+<h6>Dashboard</h6>
+<h3>Welcome {{name}}! </h3>
+<p>Pick your pokemon</p>
+{{#if pokemon}}
+    <table class="striped">
+        <thead> 
+            <tr>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each pokemon}}
+                <tr>
+                    <td><a href="{{pokemon}}"></a>{{name}}</td>
+                    <td><a href="{{picture}}"></a></td>
+                    <td><span class = "dash-status"></span></td>
+                    <td></td>
+                </tr> 
+            {{/each}}
+        </tbody>
+{{else}}
+ <p>No pokemon found</p>
+{{/if}}
